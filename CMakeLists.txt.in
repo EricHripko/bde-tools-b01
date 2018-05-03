@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 2.8.2)
+
+project(bde-tools-download NONE)
+
+include(ExternalProject)
+ExternalProject_Add(bde-tools
+  GIT_REPOSITORY    https://github.com/EricHripko/bde-tools
+  GIT_TAG           6539f85ee41a4d4ac704a787ed0fd337dc80fe67
+  SOURCE_DIR        "${CMAKE_BINARY_DIR}/bde-tools"
+  BINARY_DIR        "${CMAKE_BINARY_DIR}/bde-tools-build"
+  CONFIGURE_COMMAND ""
+  BUILD_COMMAND     ""
+  INSTALL_COMMAND   ""
+  TEST_COMMAND      ""
+)
